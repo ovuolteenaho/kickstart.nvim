@@ -491,6 +491,9 @@ vim.defer_fn(function()
   }
 end, 0)
 
+-- Newline on <CR>
+vim.keymap.set('n', '<CR>', 'o<Esc>')
+
 -- [[ Configure LSP ]]
 --  This function gets run when an LSP connects to a particular buffer.
 local on_attach = function(_, bufnr)
